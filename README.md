@@ -7,19 +7,23 @@ Steps to Follow:
 Upload the datasets to the S3 bucket as a data source. Place the datasets in the dataset folder within the S3 bucket.
 
 -command: aws s3 cp /path/to/your/dataset s3://your-bucket-name/dataset/
-3. Create movie_lens_analysis.py
+
+2. Create movie_lens_analysis.py
 -Create the movie_lens_analysis.py file for reading the dataset, applying transformations according to business rules.
-4. Upload bootstrap.sh and movie_lens_analysis.py to S3
+
+3. Upload bootstrap.sh and movie_lens_analysis.py to S3
 -Upload the bootstrap.sh file for library installations during bootstrapping and the movie_lens_analysis.py file to S3.
+
 - command: aws s3 cp bootstrap.sh s3://your-bucket-name/bootstrap/
   
 aws s3 cp movie_lens_analysis.py s3://your-bucket-name/script/
-5. Develop Terraform Modules to Create AWS EMR Cluster
+
+4. Develop Terraform Modules to Create AWS EMR Cluster
 - Create Terraform modules to set up the AWS EMR cluster.
 - Command to run: 'terraform init' and then 'terraform apply'
-7. Save Results in CSV Format to S3 Bucket
+5. Save Results in CSV Format to S3 Bucket
 - The results of the PySpark job will be saved in CSV format in the output folder within the S3 bucket.
-8. Modify EMR Cluster Configuration
+6. Modify EMR Cluster Configuration
 - Adjust the EMR cluster configuration to handle processing of 500GB or more data on a daily basis. This may involve increasing the instance types and count in the Terraform configuration.
 
 ## Datasets
