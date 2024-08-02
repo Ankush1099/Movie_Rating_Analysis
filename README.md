@@ -33,11 +33,11 @@ made by 6,040 MovieLens users who joined MovieLens in 2000.
 ## Variables
 
 - `name` - Name of EMR cluster
-- `vpc_id` - ID of VPC meant to house cluster
+- `vpc_id` - ID of VPC 
 - `release_label` - EMR release version to use
 - `applications` - A list of EMR release applications
 - `key_name` - EC2 Key pair name
-- `subnet_id` - Subnet used to house the EMR nodes
+- `subnet_id` - ID of Subnet 
 - `instance_groups` - List of objects for each desired instance group
 - `bootstrap_name` - Name for the bootstrap action
 - `bootstrap_uri` - S3 URI for the bootstrap action script
