@@ -1,8 +1,8 @@
-Movie Lens Analysis Project
+## Movie Lens Analysis Project
 This README file outlines the steps to set up and execute the Movie Lens Analysis project, which involves processing and transforming datasets using AWS EMR. Adjust the configurations and scripts as per your specific requirements.
 
 
-Steps to Follow
+Steps to Follow:
 1. Push Datasets to S3 Bucket
 Upload the datasets to the S3 bucket as a data source. Place the datasets in the dataset folder within the S3 bucket.
 command: aws s3 cp /path/to/your/dataset s3://your-bucket-name/dataset/
@@ -20,7 +20,7 @@ The results of the PySpark job will be saved in CSV format in the output folder 
 6. Modify EMR Cluster Configuration
 Adjust the EMR cluster configuration to handle processing of 500GB or more data on a daily basis. This may involve increasing the instance types and count in the Terraform configuration.
 
-## Datsets
+## Datasets
 1,000,209 anonymous ratings of approximately 3,900 movies 
 made by 6,040 MovieLens users who joined MovieLens in 2000.
 
