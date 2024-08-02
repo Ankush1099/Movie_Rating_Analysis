@@ -5,12 +5,14 @@ This README file outlines the steps to set up and execute the Movie Lens Analysi
 Steps to Follow:
 1. Push Datasets to S3 Bucket
 Upload the datasets to the S3 bucket as a data source. Place the datasets in the dataset folder within the S3 bucket.
+
 -command: aws s3 cp /path/to/your/dataset s3://your-bucket-name/dataset/
 3. Create movie_lens_analysis.py
 -Create the movie_lens_analysis.py file for reading the dataset, applying transformations according to business rules.
 4. Upload bootstrap.sh and movie_lens_analysis.py to S3
 -Upload the bootstrap.sh file for library installations during bootstrapping and the movie_lens_analysis.py file to S3.
 - command: aws s3 cp bootstrap.sh s3://your-bucket-name/bootstrap/
+  
 aws s3 cp movie_lens_analysis.py s3://your-bucket-name/script/
 5. Develop Terraform Modules to Create AWS EMR Cluster
 - Create Terraform modules to set up the AWS EMR cluster.
