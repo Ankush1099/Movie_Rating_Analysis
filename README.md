@@ -6,7 +6,7 @@ Steps to Follow:
 1. Push Datasets to S3 Bucket
 Upload the datasets to the S3 bucket as a data source. Place the datasets in the dataset folder within the S3 bucket.
 
--command: aws s3 cp /path/to/your/dataset s3://your-bucket-name/dataset/
+- command: aws s3 cp /path/to/your/dataset s3://your-bucket-name/dataset/
 
 2. Create movie_lens_analysis.py
 -Create the movie_lens_analysis.py file for reading the dataset, applying transformations according to business rules.
@@ -16,7 +16,7 @@ Upload the datasets to the S3 bucket as a data source. Place the datasets in the
 
 - command: aws s3 cp bootstrap.sh s3://your-bucket-name/bootstrap/
   
-aws s3 cp movie_lens_analysis.py s3://your-bucket-name/script/
+  aws s3 cp movie_lens_analysis.py s3://your-bucket-name/script/
 
 4. Develop Terraform Modules to Create AWS EMR Cluster
 - Create Terraform modules to set up the AWS EMR cluster.
